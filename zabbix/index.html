@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Zabbix - Documentação Particular</title>
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Zabbix";
+    var mkdocs_page_input_path = "zabbix.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Documentação Particular</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../samba/">Controladores de Domínio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../xen/">Xen</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../guacamole/">Guacamole</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Linux/">Linux</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Zabbix</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#instalacao-do-agente-zabbix-em-servidores-linux-debian">Instalação do agente zabbix em servidores Linux Debian</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#instale-o-repositorio">Instale o repositório</a></li>
+        
+            <li><a class="toctree-l3" href="#instale-o-zabbix-agent">Instale o zabbix-agent</a></li>
+        
+            <li><a class="toctree-l3" href="#configure-o-agente">Configure o agente</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Windows/">Windows</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../bacula/">Bacula</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../cisco/">Cisco</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Documentação Particular</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Zabbix</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="instalacao-do-agente-zabbix-em-servidores-linux-debian">Instalação do agente zabbix em servidores Linux Debian</h1>
+<h6 id="instale-o-repositorio">Instale o repositório</h6>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># url=&#39;https://repo.zabbix.com/zabbix/4.5/debian/pool/main/z/zabbix-release/zabbix-release_4.5-1%2Bbuster_all.deb&#39;
+# wget $url
+# dpkg -i zabbix-release_4.5-1+buster_all.deb
+# apt update -y
+</pre></div>
+</td></tr></table>
+
+<h6 id="instale-o-zabbix-agent">Instale o zabbix-agent</h6>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># apt install zabbix-agent zabbix-get -y
+</pre></div>
+</td></tr></table>
+
+<h5 id="configure-o-agente">Configure o agente</h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># sed -i &#39;s/Hostname=Zabbix server/Hostname=&#39;$(hostname)&#39;/g&#39; zabbix_agentd.conf
+
+# sed -i &#39;s/Server=127.0.0.1/Server=zabbix.infra.ifpe.edu.br/g&#39; zabbix_agentd.conf 
+
+# sed -i &#39;s/ServerActive=127.0.0.1/ServerActive=zabbix.infra.ifpe.edu.br/g&#39; zabbix_agentd.conf 
+
+# sed -i &#39;s/# LogRemoteCommands=0/LogRemoteCommands=1/g&#39; zabbix_agentd.conf 
+
+# sed -i &#39;s/# EnableRemoteCommands=0/EnableRemoteCommands=1/g&#39; zabbix_agentd.conf 
+
+# sed -i &#39;s/# StartAgents=3/StartAgents=3/g&#39; zabbix_agentd.conf
+</pre></div>
+</td></tr></table>
+
+<h6 id="habilite-o-agente-para-iniciar-no-boot-do-sistema-e-de-o-start-no-agente">Habilite o agente para iniciar no boot do sistema e dê o start no agente</h6>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span># systemctl enable zabbix-agent
+# systemctl start zabbix-agent
+</pre></div>
+</td></tr></table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Windows/" class="btn btn-neutral float-right" title="Windows">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Linux/" class="btn btn-neutral" title="Linux"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Linux/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Windows/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
