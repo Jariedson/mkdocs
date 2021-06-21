@@ -1,0 +1,17 @@
+site_name: Documentação Particular
+nav:
+    - Home: index.md
+    - Controladores de Domínio: samba.md
+    - Xen: xen.md
+    - Guacamole: guacamole.md
+    - Linux: Linux.md
+    - Zabbix: zabbix.md
+    - Windows: Windows.md
+    - Bacula: bacula.md
+    - Cisco: cisco.md
+    - About: about.md
+theme: readthedocs
+markdown_extensions:
+  - codehilite:
+      linenums: true
+
