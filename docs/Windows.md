@@ -1,7 +1,3 @@
-# Dicas Windows 
-
-Documentação com dicas sobre o Windows
-
 ##### Adicionar rota permanente no Windows
 
 
