@@ -1,7 +1,3 @@
-# Dicas Linux 
-
-Documentação com dicas sobre o Linux
-
 ### Aumentar o swap no Linux
 
 
